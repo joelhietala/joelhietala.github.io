@@ -80,7 +80,7 @@
 
 		}
 	
-	// Banner.
+	// Funcitons - Joel
 		$(".scrollyHover").hover(
 			function() {
 				$(this).css("transition", "200ms ease-out");
@@ -99,6 +99,26 @@
 				$(this).css("transform", "scale(1)");
 		});
 
+		$(".arrowHover").hover(
+			function() {
+				$(this).css("transition", "100ms ease-out");
+				$(this).css("transform", "scale(1.2)");
+		},
+			function(){
+				$(this).css("transform", "scale(1)");
+		});
+
+		$(".menuHover").hover(
+			function() {
+				$(this).css("transition", "200ms ease-out");
+				$(this).css("transform", "scaleX(1.1)");
+				$(this).css("border-bottom", "1px solid white");
+		},
+			function(){
+				$(this).css("transform", "scaleX(1.0)");
+				$(this).css("border-bottom", "none");
+		});
+
 		$(".iconHover").hover(
 			function() {
 				$(this).css("transition", "800ms ease-out");
@@ -107,6 +127,21 @@
 			function(){
 				$(this).css("transition", "400ms ease-out");
 				$(this).css("transform", "rotate(-45deg)");
+		});
+
+		$(".iconHoverGeneric").hover(
+			function() {
+				$(this).css("transition", "800ms ease-out");
+				$(this).css("transform", "rotate(360deg)");
+		},
+			function(){
+				$(this).css("transition", "400ms ease-out");
+				$(this).css("transform", "rotate(-360deg)");
+		});
+
+		$(".copyToClipboard").click(
+			function() {
+				navigator.clipboard.writeText("hietaladev@gmail.com")
 		});
 
 })(jQuery);
