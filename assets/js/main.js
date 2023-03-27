@@ -25,7 +25,7 @@
 		$window.on('load', function() {
 			window.setTimeout(function() {
 				$body.removeClass('is-preload');
-			}, 100);
+			}, 75);
 		});
 
 	// Mobile?
@@ -46,7 +46,7 @@
 	// Scrolly.
 		$('.scrolly')
 			.scrolly({
-				speed: 1500,
+				speed: 750,
 				offset: $header.outerHeight()
 			});
 
@@ -81,20 +81,32 @@
 		}
 	
 	// Banner.
-		$(".scrolly").hover(
+		$(".scrollyHover").hover(
 			function() {
-				$(this).css("font-size", "0.85em");
+				$(this).css("transition", "200ms ease-out");
+				$(this).css("transform", "scale(1.2)");
 		},
 			function(){
-				$(this).css("font-size", "0.8em");
+				$(this).css("transform", "scale(1)");
 		});
 
 		$(".menuToggle").hover(
 			function() {
-				$(this).css("margin-right", "0.25em");
+				$(this).css("transition", "200ms ease-out");
+				$(this).css("transform", "scale(1.1)");
 		},
 			function(){
-				$(this).css("margin-right", "0em");
+				$(this).css("transform", "scale(1)");
+		});
+
+		$(".iconHover").hover(
+			function() {
+				$(this).css("transition", "800ms ease-out");
+				$(this).css("transform", "rotate(360deg)");
+		},
+			function(){
+				$(this).css("transition", "400ms ease-out");
+				$(this).css("transform", "rotate(-45deg)");
 		});
 
 })(jQuery);

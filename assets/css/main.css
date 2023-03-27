@@ -245,11 +245,12 @@ input, select, textarea {
 		}
 
 	blockquote {
-		border-left: solid 4px #fff;
+		border-left: solid 4px #ffffff;
 		font-style: italic;
 		margin: 0 0 2em 0;
 		padding: 0.5em 0 0.5em 2em;
 		text-align: left;
+		letter-spacing: 3px;
 	}
 
 	code {
@@ -1783,7 +1784,6 @@ input, select, textarea {
 	}
 
 		header.major h2, header.major h3, header.major h4, header.major h5, header.major h6 {
-			border-bottom: solid 2px #fff;
 			display: inline-block;
 			padding-bottom: 1em;
 			position: relative;
@@ -2083,20 +2083,17 @@ input, select, textarea {
 
 		.icon.style1 {
 			color: #ffffff;
-			background-color: #0000003a;
+			background-color: #00000081;
+			filter: drop-shadow(0px 0px 5px rgb(0, 0, 0));
 
 		}
 
 		.icon.style2 {
 			color: #ffffff;
-			background-color: #0000003a;
+			background-color: #00000081;
+			filter: drop-shadow(0px 0px 5px rgb(0, 0, 0));
 		}
 
-		.icon.style3 {
-			color: #ffffff;
-			background-color: #0000003a;
-
-		}
 		.rotate1 {
 			animation: rotation 4s infinite linear running;
 		}
@@ -2351,9 +2348,6 @@ input, select, textarea {
 				@media screen and (max-width: 736px) {
 
 					ul.icons.major li {
-						padding: 0 1em !important;
-					}
-					ul.icons.major li span {
 						display: none;
 					}
 					ul.icons.major li h4 {
@@ -2585,30 +2579,124 @@ input, select, textarea {
 		list-style: none;
 		padding: 0;
 		width: 100%;
+		
 	}
 
 		.features li {
-			padding: 4em 4em 2em 6em ;
+			padding: 4em 4em 2em 4em ;
 			display: block;
 			position: relative;
-			text-align: left;
+			text-align: center;
 			width: 50%;
 		}
+			.features li.bottomRow {
+				padding-top:  0;
+			}
 
 			.features li:nth-child(1) {
-				background-color: #101010;
+				background-color: #223a4065;
+				border: 1px solid rgba(255, 255, 255, 0.185);
+				border-right: none;
+				border-bottom: none;
+				padding-right: 2em;
+			}
+
+			.features li:nth-child(1) a > .image img {
+				transition: 0.1s ease-in;
+				filter: blur(1px);
+			}
+
+			.features li:nth-child(1) a > h4, .features li:nth-child(1) a > .image img {
+				transition: 0.1s ease-in;
+			}
+
+			.features li:nth-child(1) a:hover > h4 {
+				transform: scale(1.2);
+			}
+
+			.features li:nth-child(1) a:hover > .image img {
+				filter: drop-shadow(0px 0px 0.3em #ffffffd8);
+				transform: scale(1.03);
 			}
 
 			.features li:nth-child(2) {
-				background-color: #1a1a1a;
+				background-color: #223a4065;
+				border: 1px solid rgba(255, 255, 255, 0.185); 
+				border-left: none;
+				border-bottom: none;
+				padding-left: 2em;
+				
 			}
 
+			.features li:nth-child(2) a > .image img {
+				transition: 0.1s ease-in;
+				filter: blur(1px);
+			}
+
+			.features li:nth-child(2) a > h4, .features li:nth-child(1) a > .image img {
+				transition: 0.1s ease-in;
+			}
+
+			.features li:nth-child(2) a:hover > h4 {
+				transform: scale(1.2);
+			}
+
+			.features li:nth-child(2) a:hover > .image img {
+				filter: drop-shadow(0px 0px 0.3em #ffffffd8);
+				transform: scale(1.03);
+			}
+
+
+
 			.features li:nth-child(3) {
-				background-color: #1a1a1a;
+				background-color: #223a4065;
+				border: 1px solid rgba(255, 255, 255, 0.185);
+				border-top: none;
+				border-right: none;
+				padding-right: 2em;
+			}
+
+			.features li:nth-child(3) a > .image img {
+				transition: 0.1s ease-in;
+				filter: blur(1px);
+			}
+
+			.features li:nth-child(3) a > h4, .features li:nth-child(1) a > .image img {
+				transition: 0.1s ease-in;
+			}
+
+			.features li:nth-child(3) a:hover > h4 {
+				transform: scale(1.2);
+			}
+
+			.features li:nth-child(3) a:hover > .image img {
+				filter: drop-shadow(0px 0px 0.3em #ffffffd8);
+				transform: scale(1.03);
 			}
 
 			.features li:nth-child(4) {
-				background-color: #101010;
+				background-color: #223a4065;
+				border: 1px solid rgba(255, 255, 255, 0.185);
+				border-top: none;
+				border-left: none;
+				padding-left: 2em;
+			}
+			.features li:nth-child(4) a > .image img {
+				transition: 0.1s ease-in;
+				filter: blur(1px);
+			}
+
+			.features li:nth-child(4) a > h4, .features li:nth-child(1) a > .image img {
+				transition: 0.1s ease-in;
+			}
+
+			.features li:nth-child(4) a:hover > h4 {
+				transform: scale(1.2);
+			}
+
+			.features li:nth-child(4) a:hover > .image img {
+				filter: drop-shadow(0px 0px 0.3em #ffffffd8);
+				transform: scale(1.03);
 			}
 
 			.features li:nth-child(5) {
@@ -2702,6 +2790,7 @@ input, select, textarea {
 		display: -webkit-flex;
 		display: -ms-flex;
 		display: flex;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.096);
 	}
 
 		.spotlight .image {
@@ -2737,6 +2826,7 @@ input, select, textarea {
 
 		.spotlight:nth-child(1) {
 			background-color: #101010;
+			border-top: 1px solid rgba(255, 255, 255, 0.096);
 		}
 
 		.spotlight:nth-child(2) {
@@ -2850,7 +2940,7 @@ input, select, textarea {
 		}
 
 		.wrapper.style1 {
-			background-color: #131313b0;
+			backdrop-filter: blur(10px);
 			color: #c8ece9;
 			height: 100vh;
 			display: -moz-flex;
@@ -2866,15 +2956,18 @@ input, select, textarea {
 			-ms-justify-content: center;
 			justify-content: center;
 			cursor: default;
-			height: 100vh;
 			min-height: 35em;
 			overflow: hidden;
 			position: relative;
 			text-align: center;
+			border-top: 1px solid rgba(92, 92, 92, 0.096);
 		}
 
 			.wrapper.style1 strong, .wrapper.style1 b {
 				color: #ffffff;
+			}
+			.wrapper.style1 h2 {
+				filter: drop-shadow(5px 5px 0px #122326c0) drop-shadow(1px 1px 5px #ffffff5d)
 			}
 
 			.wrapper.style1 h2, .wrapper.style1 h3, .wrapper.style1 h4, .wrapper.style1 h5, .wrapper.style1 h6 {
@@ -2886,7 +2979,7 @@ input, select, textarea {
 			}
 
 			.wrapper.style1 blockquote {
-				border-color: rgba(255, 255, 255, 0.125);
+				border-color: rgba(255, 255, 255, 0.486);
 			}
 
 			.wrapper.style1 code {
@@ -2898,7 +2991,11 @@ input, select, textarea {
 			}
 
 			.wrapper.style1 header.major h2, .wrapper.style1 header.major h3, .wrapper.style1 header.major h4, .wrapper.style1 header.major h5, .wrapper.style1 header.major h6 {
-				border-color: rgba(0, 0, 0, 0.125);
+				border-color: rgb(255, 255, 255);
+			}
+
+			.wrapper.style1 .major h2 {
+				font-size: 1.75em;
 			}
 
 			.wrapper.style1 header.major p {
@@ -3008,7 +3105,7 @@ input, select, textarea {
 				.wrapper.style1 input[type="button"]:hover,
 				.wrapper.style1 button:hover,
 				.wrapper.style1 .button:hover {
-					background-color: rgba(255, 255, 255, 0.075);
+					background-color: backdroprgba(255, 255, 255, 0.075);
 				}
 
 				.wrapper.style1 input[type="submit"]:active,
@@ -3025,15 +3122,27 @@ input, select, textarea {
 					border-top-color: rgba(0, 0, 0, 0.125);
 				}
 
+				.wrapper.style1 {
+					max-height: 50vh;
+				}
+
+				.wrapper.style1 ul.icons.major {
+					margin: 0;
+					padding: 0;
+				}
+
 			}
 
 		.wrapper.style2 {
 			background-color: #2e3842;
+			filter: drop-shadow(0px 0px 4px rgb(0, 0, 0));
 		}
 
 		.wrapper.style3 {
-			background-color: #131313b0;
+			backdrop-filter: blur(10px);
 			color: #d3d4e4;
+			border-bottom: 1px solid rgba(255, 255, 255, 0.096);
+			box-shadow: 0px 0px 4px rgba(255, 255, 255, 0.137);
 		}
 
 			.wrapper.style3 strong, .wrapper.style3 b {
@@ -3058,6 +3167,10 @@ input, select, textarea {
 
 			.wrapper.style3 header p {
 				color: #b9bad4;
+			}
+
+			.wrapper.style3 .features {
+				filter: drop-shadow(0px 0px 4px rgb(0, 0, 0));
 			}
 
 			.wrapper.style3 header.major h2, .wrapper.style3 header.major h3, .wrapper.style3 header.major h4, .wrapper.style3 header.major h5, .wrapper.style3 header.major h6 {
@@ -3133,6 +3246,7 @@ input, select, textarea {
 				border-color: rgba(0, 0, 0, 0.125);
 			}
 
+
 			.wrapper.style3 table tbody tr {
 				border-color: rgba(0, 0, 0, 0.125);
 			}
@@ -3185,13 +3299,20 @@ input, select, textarea {
 			@media screen and (max-width: 736px) {
 
 				.wrapper.style3 .features li {
-					border-top-color: rgba(0, 0, 0, 0.125);
+					border: none;
+					padding: 0;
+				}
+
+				.wrapper.style3 .features h4 {
+					font-size: 0;
 				}
 
 			}
 
 		.wrapper.style4 {
-			background-color: #13131300;
+			background-color: #00000000;
+			padding-top: 4em;
+			padding-bottom: 4em;
 		}
 
 		.wrapper.style5 {
@@ -3633,6 +3754,7 @@ input, select, textarea {
 		overflow: hidden;
 		position: relative;
 		text-align: center;
+		backdrop-filter: blur(3px);
 	}
 
 		#banner h2 {
@@ -3650,6 +3772,7 @@ input, select, textarea {
 			padding: 0.35em 1em;
 			position: relative;
 			z-index: 1;
+			margin-bottom: 0.5em;
 		}
 
 			#banner h2:before, #banner h2:after {
@@ -3664,7 +3787,7 @@ input, select, textarea {
 				background: rgb(255, 255, 255);
 				content: '';
 				display: block;
-				height: 3px;
+				height: 0.1em;
 				position: absolute;
 				width: 100%;
 			}
@@ -3693,10 +3816,10 @@ input, select, textarea {
 			-webkit-transition: -webkit-transform 0.75s ease, opacity 0.75s ease;
 			-ms-transition: -ms-transform 0.75s ease, opacity 0.75s ease;
 			transition: transform 0.75s ease, opacity 0.75s ease;
-			-moz-transition-delay: 3.5s;
-			-webkit-transition-delay: 3.5s;
-			-ms-transition-delay: 3.5s;
-			transition-delay: 3.5s;
+			-moz-transition-delay: 3s;
+			-webkit-transition-delay: 3s;
+			-ms-transition-delay: 3s;
+			transition-delay: 3s;
 			-moz-transform: translateY(0);
 			-webkit-transform: translateY(0);
 			-ms-transform: translateY(0);
@@ -3740,10 +3863,10 @@ input, select, textarea {
 			-webkit-transition: opacity 3s ease-in-out;
 			-ms-transition: opacity 3s ease-in-out;
 			transition: opacity 3s ease-in-out;
-			-moz-transition-delay: 1.25s;
-			-webkit-transition-delay: 1.25s;
-			-ms-transition-delay: 1.25s;
-			transition-delay: 1.25s;
+			-moz-transition-delay: 1s;
+			-webkit-transition-delay: 1s;
+			-ms-transition-delay: 1s;
+			transition-delay: 1s;
 			content: '';
 			background: #000000;
 			display: block;
@@ -3753,13 +3876,48 @@ input, select, textarea {
 			left: 0;
 			top: 0;
 			opacity: 0;
+		} 
+		
+		#banner ul.icons {
+			font-size: 1em;
+			margin: 0;
+		}
+
+		#banner ul.icons li {
+			margin: 0;
+			padding-left: 0.5em;
+			padding-right: 0.5em;
+		}
+
+		#banner ul.icons li:nth-child(1) { 
+			transition: 0.2s ease-in-out;
+		}
+
+		#banner ul.icons li:nth-child(1):hover { 
+			transform: scale(1.5);
+		}
+
+		#banner ul.icons li:nth-child(2) { 
+			transition: 0.2s ease-in-out;
+		}
+
+		#banner ul.icons li:nth-child(2):hover { 
+			transform: scale(1.5);
+		}
+
+		#banner ul.icons li:nth-child(3) { 
+			transition: 0.2s ease-in-out;
+		}
+
+		#banner ul.icons li:nth-child(3):hover { 
+			transform: scale(1.5);
 		}
 
 		@media screen and (max-width: 736px) {
 
 			#banner {
 				padding: 7em 3em 5em 3em ;
-				height: auto;
+				height: 100vh;
 				min-height: 0;
 			}
 
@@ -3809,6 +3967,13 @@ input, select, textarea {
 		display: -ms-flex;
 		display: flex;
 		max-width: 45em;
+		padding: 2em;
+		background-color: #00000000;
+		border-radius: 3px;
+		box-shadow: 0px 0px 4px rgba(255, 255, 255, 0.137);
+		border: 1px solid rgba(255, 255, 255, 0.096);
+		backdrop-filter: blur(10px);
+		color: #d3d4e4;
 	}
 
 		#cta .inner header {
@@ -3822,6 +3987,10 @@ input, select, textarea {
 
 			#cta .inner header p {
 				color: inherit;
+			}
+
+			#cta .inner header ul.icons {
+				margin-bottom: 0;
 			}
 
 		#cta .inner .actions {
@@ -3842,6 +4011,10 @@ input, select, textarea {
 				#cta .inner header {
 					padding-right: 0;
 					width: 100%;
+				}
+
+				#cta .inner p {
+					display: none;
 				}
 
 				#cta .inner .actions {
@@ -3865,10 +4038,10 @@ input, select, textarea {
 
 	#main > header {
 		padding: 12em 0 10em 0 ;
-		background-image: -moz-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner2.jpg");
-		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner2.jpg");
-		background-image: -ms-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner2.jpg");
-		background-image: linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner2.jpg");
+		background-image: -moz-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/bannertest11.jpg");
+		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/bannertest11.jpg");
+		background-image: -ms-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/bannertest11.jpg");
+		background-image: linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/bannertest11.jpg");
 		background-attachment: fixed;
 		background-position: center center;
 		background-repeat: no-repeat;
@@ -3939,6 +4112,7 @@ input, select, textarea {
 		padding: 6em 0 4em 0 ;
 		background-color: #1d242a;
 		text-align: center;
+		filter: drop-shadow(0px 20px 20px rgb(0, 0, 0));
 	}
 
 		#footer .icons {
@@ -4015,10 +4189,10 @@ input, select, textarea {
 /* Landing */
 
 	body.landing #page-wrapper {
-		background-image: -moz-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banneri10.jpg");
-		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banneri10.jpg");
-		background-image: -ms-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banneri10.jpg");
-		background-image: linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banneri10.jpg");
+		background-image: -moz-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/bannertest11.jpg");
+		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/bannertest11.jpg");
+		background-image: -ms-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/bannertest11.jpg");
+		background-image: linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/bannertest11.jpg");
 		background-attachment: fixed;
 		background-position: center center;
 		background-repeat: no-repeat;
@@ -4036,10 +4210,10 @@ input, select, textarea {
 
 	body.is-mobile.landing #banner,
 	body.is-mobile.landing .wrapper.style4 {
-		background-image: -moz-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banneri2.jpg");
-		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banneri2.jpg");
-		background-image: -ms-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banneri2.jpg");
-		background-image: linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banneri2.jpg");
+		background-image: -moz-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/bannertest11.jpg");
+		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/bannertest11.jpg");
+		background-image: -ms-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/bannertest11.jpg");
+		background-image: linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/bannertest11.jpg");
 		background-position: center center;
 		background-repeat: no-repeat;
 		background-size: cover;
