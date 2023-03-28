@@ -1,15 +1,15 @@
 Protfolio website
 
-- joelhietala.github.io
+https://joelhietala.github.io/
 
 Credits:
 
-	Demo Images:
-		Unsplash (unsplash.com)
+	Background image:
+		Unsplash (https://unsplash.com/photos/RmoWqDCqN2E)
 
 	Icons:
 		Font Awesome (fontawesome.io)
-		Flaticon     (flaticon.com)
+		Flaticon (https://www.flaticon.com/free-icons/graphic-design)
 
 	Other:
 		jQuery (jquery.com)
