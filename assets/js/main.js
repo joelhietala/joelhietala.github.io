@@ -144,4 +144,5 @@
 				navigator.clipboard.writeText("hietaladev@gmail.com")
 		});
 
+
 })(jQuery);
