@@ -7,6 +7,7 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
@@ -2909,16 +2910,18 @@ input, select, textarea {
 
 		@media screen and (max-width: 980px) {
 
-			.spotlight {
-				display: block;
-			}
+				.spotlight {
+					flex-wrap: nowrap;
+				}
 
 				.spotlight br {
 					display: none;
 				}
 
 				.spotlight .image {
-					width: 100%;
+					min-width: 20em;
+					max-width: 50%;
+					
 				}
 
 				.spotlight .content {
@@ -2926,7 +2929,7 @@ input, select, textarea {
 					max-width: none;
 					text-align: center;
 					width: 100%;
-					font-size: 1em;
+					font-size: 0.8em;
 					text-align: left;
 				}
 
@@ -2934,11 +2937,39 @@ input, select, textarea {
 
 		@media screen and (max-width: 736px) {
 
+			.spotlight {
+				flex-wrap: wrap;
+			}
+			
+			.spotlight .image {
+				min-width: 25em;
+				max-width: 100%;
+				padding-left: 0;
+				margin-left: 0;
+			}
+
 			.spotlight .content {
 				padding: 3em 2em 1em 2em ;
 			}
 
 		}
+
+		@media screen and (max-width: 400px) {
+
+			
+			.spotlight .image {
+				min-width: 15em;
+				max-width: 100%;
+				padding-left: 0;
+				margin-left: 0;
+			}
+
+			.spotlight .content {
+				padding: 3em 2em 1em 2em ;
+			}
+
+		}
+
 
 /* Wrapper */
 
@@ -3040,7 +3071,7 @@ input, select, textarea {
 			overflow: hidden;
 			position: relative;
 			text-align: center;
-			background: linear-gradient(135deg, rgba(255, 255, 255, 0.089), rgba(255, 255, 255, 0));
+			background: linear-gradient(135deg, rgba(255, 255, 255, 0.199), rgba(255, 255, 255, 0));
 			border: 1px solid rgba(255, 0, 0, 0.048);
 			backdrop-filter: blur(10px);
 		}
@@ -3224,7 +3255,7 @@ input, select, textarea {
 		}
 
 		.wrapper.style2 .inner {
-			background: linear-gradient(135deg, rgba(255, 255, 255, 0.089), rgba(255, 255, 255, 0));
+			background: linear-gradient(135deg, rgba(255, 255, 255, 0.418), rgba(255, 255, 255, 0.075));
 			border: 1px solid rgba(255, 0, 0, 0.048);
 			border-radius: 3px;
 			-webkit-border-radius: 3px;
@@ -3247,7 +3278,7 @@ input, select, textarea {
 		}
 
 		.wrapper.style3 .inner{
-			background: linear-gradient(135deg, rgba(255, 255, 255, 0.089), rgba(255, 255, 255, 0));
+			background: linear-gradient(135deg, rgba(255, 255, 255, 0.24), rgba(255, 255, 255, 0.048));
 			border: 1px solid rgba(255, 0, 0, 0.048);
 			border-radius: 3px;
 			-webkit-border-radius: 3px;
@@ -4111,7 +4142,7 @@ input, select, textarea {
 		display: flex;
 		max-width: 45em;
 		padding: 2em;
-		background: linear-gradient(135deg, rgba(255, 255, 255, 0.116), rgba(255, 255, 255, 0));
+		background: linear-gradient(135deg, rgba(255, 255, 255, 0.281), rgba(255, 255, 255, 0.041));
 		border: 1px solid rgba(255, 0, 0, 0.048);
 		border-radius: 3px;
 		-webkit-border-radius: 3px;
